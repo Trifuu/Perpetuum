@@ -1,0 +1,230 @@
+.users_edit{
+    padding: 2px;
+    min-width: 45px;
+}
+.error_page{
+    width: 100%;
+    height: -webkit-calc(100% - 97px);
+    height: -moz-calc(100% - 97px);
+    height: calc(100% - 97px);
+    background: #2980b9;
+    display: flex;
+    align-items: center;
+}
+.error_page h1{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+    margin: auto;
+}
+.error_page h1 span{
+    font-weight: bold;
+    font-size: 150px;
+}
+.error_page h1 p{
+    color: #fff;
+    font-size: 40px;
+}
+.add_line{
+    display: none;
+}
+.input_change .dataTables_wrapper .dataTables_filter label input{
+    height: 30px;
+    border:1px solid #ccc;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.margin_elem_formular{
+    margin-left: 20px;
+}
+.obligatoriu{
+    color: red;
+    font-size: 14px;
+}
+#users_table thead th,#users_table{
+    border-bottom: 0;
+}
+#participanti_table thead th,#participanti_table{
+    border-bottom: 0;
+}
+#participanti_table th, #participanti_table td,#users_table td,#users_table th{
+    text-align: center;
+}
+
+
+.timer{
+    text-align: center;
+    color: #fff2e9;
+    font-size: 70px;
+}
+@media (max-width: 380px) {
+    .timer{
+        font-size: 55px;
+    }
+ }
+.active { 
+    background-color: #fff2e9;
+    border-radius: 7px 7px 7px 7px;
+    -moz-border-radius: 7px 7px 7px 7px;
+    -webkit-border-radius: 7px 7px 7px 7px;
+    border: 0px solid #000000;
+
+}
+.active > .nav-link{ 
+    color:black !important;
+}
+.nav-link{
+    color: #fff2e9 !important;
+}
+
+.div_login{
+    color: black;
+    background-color: #fff2e9;
+    border-radius: 27px 27px 27px 27px;
+    -moz-border-radius: 27px 27px 27px 27px;
+    -webkit-border-radius: 27px 27px 27px 27px;
+    border: 0px solid #000000;
+}
+.card{
+    padding: 20px;
+    margin: 20px;
+        color: black;
+    background-color: #fff2e9;
+    border-radius: 27px 27px 27px 27px;
+    -moz-border-radius: 27px 27px 27px 27px;
+    -webkit-border-radius: 27px 27px 27px 27px;
+    border: 0px solid #000000;
+}
+.another-for-card-faq{
+    float:left;
+    height: 150px;
+}
+.card-faq{
+
+    padding: 5px;
+        color: black;
+    background-color: #fff2e9;
+    border-radius: 7px 7px 7px 7px;
+    -moz-border-radius: 7px 7px 7px 7px;
+    -webkit-border-radius: 7px 7px 7px 7px;
+    border: 0px solid #000000;
+}
+
+/*expand pagina faq*/
+p.accordion {
+    background-color: #00b4e5;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    margin-bottom:10px;
+    border-radius: 10px;
+}
+/* Add a background color to the accordion if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+p.accordion.active, p.accordion:hover {
+    background-color: #4392f1;
+}
+/* Unicode character for "plus" sign (+) */
+p.accordion:after {
+    content: '\2795';
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+/* Unicode character for "minus" sign (-) */
+p.accordion.active:after {
+    content: "\2796";
+}
+/* Style the element that is used for the panel class */
+div.panel {
+    color:black;
+    padding: 0 18px;
+    background-color: #fff2e9;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.4s ease-in-out;
+    opacity: 0;
+    margin-bottom:10px;
+    border-radius: 10px;
+}
+div.panel.show {
+    opacity: 1;
+    max-height: 500px; /* Whatever you like, as long as its more than the height of the content (on all screen sizes) */
+}
+/*expand pagina faq*/
+#validate_formular label{
+    color: black;
+    font-size: 14px;
+}
+.scris_about2{
+    text-align: center;
+    font-size: 90px;
+    margin-top: 40px;
+    display:inline-block;
+    margin-left: 45px;
+}
+.scris_about_numere{
+    font-size: 25px;
+    margin-top: -75px;
+    margin-bottom: 45px;
+}
+.numere_about{
+    height: 50px;
+    font-size: 100px;
+}
+
+@font-face {
+    font-family: Roboto-Light;
+    src: url(Roboto-Light.ttf);
+}
+@font-face {
+    font-family: Roboto-Regular;
+    src: url(Roboto-Regular.ttf);
+}
+@font-face {
+    font-family: Font1;
+    src: url(font1.ttf);
+}
+
+/*scrollbar*/
+.scrollbar
+{
+    padding: 10px;
+    margin-left: 30px;
+    float: left;
+    height: 300px;
+    overflow-y: scroll;
+        color: black;
+    background-color: #fff2e9;
+    border-radius: 7px 7px 7px 7px;
+    -moz-border-radius: 7px 7px 7px 7px;
+    -webkit-border-radius: 7px 7px 7px 7px;
+    border: 0px solid #000000;
+}
+
+body{
+    height:100%;
+    font-family: Roboto-Light;
+    color: #fff2e9;
+    background-image: url(img/body_background.png);
+}
+.navbar{
+    background-image: url(img/header_background.png);
+    font-family: font1;
+    
+}
+.linie_separatoare{
+    background-image: url(img/linie_separatore.png);
+    height: 8px;
+    margin-bottom: 20px;
+}
+.nav-item{
+    margin-left: 35px;
+    font-size: 22px;
+}
