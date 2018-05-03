@@ -31,11 +31,8 @@ defined("autorizare") or die("Nu aveti autorizare");
     </div>
     <div class="col-lg-1"></div>
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="margin-top:30px;">
-        <img src="<?php echo _SITE_CSS . "img/moto1.png"; ?>" style="max-width: 240px;max-height: 230px;margin: auto;position: absolute;margin-top:80px;margin-left: -250px;">
-        <img src="<?php echo _SITE_CSS . "img/moto2.png"; ?>" style="max-width: 240px;max-height: 230px;margin: auto;position: absolute;margin-top:-40px;margin-left: -45px;">
-        <a href="<?php getUrl("formular", "dashboard",true); ?>">
-            <img src="<?php echo _SITE_CSS . "img/Register.png"; ?>" style="max-width: 340px;max-height: 160px;margin: auto;">
-        </a>
+        <img src="<?php echo _SITE_CSS . "img/moto1.png"; ?>" style="max-width: 240px;max-height: 230px;margin: auto;position: absolute;margin-top:80px;margin-left: -310px;">
+        <img src="<?php echo _SITE_CSS . "img/moto2.png"; ?>" style="max-width: 240px;max-height: 230px;margin: auto;position: absolute;margin-left: -155px;">
         <img src="<?php echo _SITE_CSS . "img/moto3.png"; ?>" style="max-width: 240px;max-height: 230px;margin: auto;position: absolute;margin-top:80px;margin-right: -250px;">
     </div>
 </div>

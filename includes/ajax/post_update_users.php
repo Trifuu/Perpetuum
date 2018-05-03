@@ -18,7 +18,7 @@ $user2 = get_user($id);
 $tip_user = get_user_type($user["categorie"], "users");
 global $db;
 if ($tip_user == 0 || $tip_user == 1) {
-    if (($tip_user != 0 && get_user_type($user2["categorie"], "users") == 0) || $id == 3) {
+    if (($tip_user != 0 && get_user_type($user2["categorie"], "users") == 0) || $id == 1) {
         echo getUrl("users", "dashboard", false, ["message" => "Nu aveti drepturi pentru a edita user-ul " . $user2["nume"] . " " . $user2["prenume"] . ".", "status" => "nok"]);
     } else {
         if ($col=="email" && get_email($val) != null && $val!=$user2["email"]) {

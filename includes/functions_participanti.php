@@ -78,7 +78,7 @@ function traducere_stare($numar, $culoare = false) {
         } elseif ($numar == 2) {
             return "red";
         } else {
-            return "yellow";
+            return "#FFA500";
         }
     }
 }
@@ -226,43 +226,7 @@ function create_conturi() {
             $parola = hash("sha256", $parola_clear);
 
             if (check_if_email_exist($email) == null) {
-
-//                $subject = "Inregistrare HackItAll";
-//                $headers = "MIME-Version: 1.0" . "\r\n";
-//                $headers .= "Content-type:text/html;charset=iso-8859-1" . "\r\n";
-//                $headers .= "From: lsacbucu@truster-2.webhosting4.net" . "\r\n";
-//                $headers .= "Return-Path: lsacbucu@truster-2.webhosting4.net" . "\r\n";
-//                $template = '<div>Salutare,<br/><br/>'
-//                        . 'Îți confirmăm înscrierea la HackITall și te felicităm pentru decizia 
-//                de a participa!<br/>În urma înscrierii, ți-am creat un <b>cont</b> pe site-ul 
-//                hack.lsacbucuresti.ro, putând să te loghezi cu următoarele date de 
-//                autentificare:<br/><br/>
-//                <b>e-mail:</b> ' . $email . '<br/>'
-//                        . '<b>parola:</b> ' . $parola_clear . '<br/><br/>'
-//                        . '<b>Contul este făcut doar pentru căpitanul de echipă.</b> Folosește butonul 
-//                de <b>Login</b> pentru a intra în contul tău, după care te rugăm să îți 
-//                <b>schimbi parola generata.</b><br/><br/>
-//                Etapa următoare înscrierii presupune <b>selectarea echipelor</b> care vor 
-//                participa la hackathon în perioada 24-25 martie. Această etapă 
-//                presupune o probă prin care să vă demonstrați abilitățile de 
-//                programare, de inovație, de organizare și de lucru în echipă! 
-//                Începând cu ora <b>10:00AM</b>, pe contul pe care tocmai l-ați primit 
-//                veti găsi <b>proba</b> propusă de Avira, sponsorul oficial. Aveți timp 
-//                <b>exact 72 de ore</b> pentru a îndeplini sarcina primită și de a încărca 
-//                pe același cont rezultatul final.<br/><br/>
-//                <b>START: luni, 12 martie 2018, ora 10:00AM<br/>
-//                STOP: joi, 15 martie 2018, ora 10:00AM</b><br/><br/>
-//                Orice fel de întrebări legate de procesul de selecție, le puteți 
-//                trimite la adresa: hack@lsacbucuresti.ro sau puteți lăsa mesaj pe 
-//                pagina de Facebook LSAC București.<br/><br/><br/>
-//                Mult succes,<br/>
-//                Echipa HackITall<br/>
-//            </div>';
-//
-//                $sendmessage = wordwrap($template, 70);
-//                if(mail("trifumarius01@gmail.com", $subject, $sendmessage, $headers)!=false){
                 add_user($nume, $prenume, $parola, $telefon, $email, "participant");
-//                }
             }
         }
     }

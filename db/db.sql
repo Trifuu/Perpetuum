@@ -6,12 +6,6 @@
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
-
-CREATE DATABASE IF NOT EXISTS `hack`;
-
-USE hack;
-
-
 CREATE TABLE IF NOT EXISTS `user` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nume` VARCHAR(64) COLLATE utf8_unicode_ci NOT NULL,
@@ -58,13 +52,13 @@ CREATE TABLE IF NOT EXISTS `participanti` (
 
 
 
-CREATE TABLE `hack`.detalii ( 
+CREATE TABLE detalii ( 
     `id` INT NOT NULL AUTO_INCREMENT,
     `id_echipa` INT NOT NULL, 
     `tricou1` VARCHAR(3) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL DEFAULT "", 
     `tricou2` VARCHAR(3) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL DEFAULT "", 
     `tricou3` VARCHAR(3) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL DEFAULT "", 
-    `tricou3` VARCHAR(3) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL DEFAULT "", 
+    `tricou4` VARCHAR(3) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL DEFAULT "", 
     `vegetarieni` VARCHAR(150) CHARACTER SET utf32 COLLATE utf32_unicode_ci NOT NULL,
     `vegani` VARCHAR(150) CHARACTER SET utf32 COLLATE utf32_unicode_ci NOT NULL DEFAULT "", 
     `preferinte` VARCHAR(255) CHARACTER SET utf32 COLLATE utf32_unicode_ci NOT NULL DEFAULT "", 

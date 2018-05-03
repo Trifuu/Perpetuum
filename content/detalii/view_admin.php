@@ -26,7 +26,6 @@ for ($i = 0; $i < count($echipe); $i++) {
         }
     }
 }
-//var_dump_custom($detalii_echipe);
-try_sql();
+
 
 $content = _ROOT_CONTENT . $page . "/tmpl_admin.php";

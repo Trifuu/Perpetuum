@@ -34,9 +34,7 @@ defined("autorizare") or die("Nu aveti autorizare");
         unset($_SESSION["status"]);
     }
     ?>
-    <button id="change_number_of_members" type="submit" class="btn btn-danger" style="cursor:pointer;z-index: 20;position: absolute;width:100px;font-size: 14px;margin-top:110px;right: 70px;">
-        <?php echo $limba == "en" ? "4 Members" : "4 Membri"; ?>
-    </button>
+    <button id="go_back" class="back_home back_style" title="Go home">Home</button>
     <form action="<?php getUrl("formular", "post_submit", true); ?>" method="post" id="validate_formular">
 
         <div class="card">
@@ -55,7 +53,7 @@ defined("autorizare") or die("Nu aveti autorizare");
                 <div class="mdl-cell mdl-cell--2-col"></div>
             </div>
             <div class = "mdl-grid" style="margin-top:-30px;">
-                <div id="member1" class="mdl-cell mdl-cell--4-col">
+                <div id="member1" class="mdl-cell mdl-cell--6-col">
                     <h4 style=""><?php echo $limba == "en" ? "TEAM CAPTAIN" : "CĂPITANUL ECHIPEI"; ?></h4>
 
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label margin_elem_formular">
@@ -79,8 +77,8 @@ defined("autorizare") or die("Nu aveti autorizare");
                         <div class="mdl-tooltip" data-mdl-for="telefon1" style="font-size:14px;"><?php echo $limba == "en" ? "Phone" : "Telefon"; ?></div>
                     </div>
                 </div>
-                <div id="member2" class="mdl-cell mdl-cell--4-col">
-                    <h4 style=""><?php echo $limba == "en" ? "MEMBER" : "MEMBRU"; ?></h4>
+                <div id="member2" class="mdl-cell mdl-cell--6-col">
+                    <h4 style=""><?php echo $limba == "en" ? "MEMBER 2" : "MEMBRU 2"; ?></h4>
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label margin_elem_formular">
                         <label for="nume2" class="mdl-textfield__label"><?php echo $limba == "en" ? "Last Name" : "Nume"; ?><span class="obligatoriu">*</span></label>
                         <input type="text" name="nume2" id="nume2" class="mdl-textfield__input">
@@ -102,8 +100,8 @@ defined("autorizare") or die("Nu aveti autorizare");
                         <div class="mdl-tooltip" data-mdl-for="telefon2" style="font-size:14px;"><?php echo $limba == "en" ? "Phone" : "Telefon"; ?></div>
                     </div>
                 </div>
-                <div id="member3" class="mdl-cell mdl-cell--4-col">
-                    <h4 style=""><?php echo $limba == "en" ? "MEMBER" : "MEMBRU"; ?></h4>
+                <div id="member3" class="mdl-cell mdl-cell--6-col">
+                    <h4 style=""><?php echo $limba == "en" ? "MEMBER 3" : "MEMBRU 3"; ?></h4>
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label margin_elem_formular">
                         <label for="nume3" class="mdl-textfield__label"><?php echo $limba == "en" ? "Last Name" : "Nume"; ?><span class="obligatoriu">*</span></label>
                         <input type="text" name="nume3" id="nume3" class="mdl-textfield__input">
@@ -126,25 +124,25 @@ defined("autorizare") or die("Nu aveti autorizare");
                     </div>
                     <br>
                 </div>
-                <div id="member4" class="mdl-cell mdl-cell--6-col" style="display:none;">
-                    <h4 style=""><?php echo $limba == "en" ? "MEMBER" : "MEMBRU"; ?></h4>
+                <div id="member4" class="mdl-cell mdl-cell--6-col">
+                    <h4 style=""><?php echo $limba == "en" ? "MEMBER 4(Optional)" : "MEMBRU 4(Optional)"; ?></h4>
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label margin_elem_formular">
-                        <label for="nume4" class="mdl-textfield__label"><?php echo $limba == "en" ? "Last Name" : "Nume"; ?><span class="obligatoriu">*</span></label>
+                        <label for="nume4" class="mdl-textfield__label"><?php echo $limba == "en" ? "Last Name" : "Nume"; ?></label>
                         <input type="text" name="nume4" id="nume4" class="mdl-textfield__input">
                         <div class="mdl-tooltip" data-mdl-for="nume4" style="font-size:14px;"><?php echo $limba == "en" ? "Last Name" : "Nume"; ?></div>
                     </div>
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label margin_elem_formular">
-                        <label for="prenume4" class="mdl-textfield__label"><?php echo $limba == "en" ? "First Name" : "Prenume"; ?><span class="obligatoriu">*</span></label>
+                        <label for="prenume4" class="mdl-textfield__label"><?php echo $limba == "en" ? "First Name" : "Prenume"; ?></label>
                         <input type="text" name="prenume4" id="prenume4" class="mdl-textfield__input">
                         <div class="mdl-tooltip" data-mdl-for="prenume4" style="font-size:14px;"><?php echo $limba == "en" ? "First Name" : "Prenume"; ?></div>
                     </div>
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label margin_elem_formular">
-                        <label for="email4" class="mdl-textfield__label"><?php echo $limba == "en" ? "Email" : "Email"; ?><span class="obligatoriu">*</span></label>
+                        <label for="email4" class="mdl-textfield__label"><?php echo $limba == "en" ? "Email" : "Email"; ?></label>
                         <input type="email" name="email4" id="email4" class="mdl-textfield__input">
                         <div class="mdl-tooltip" data-mdl-for="email4" style="font-size:14px;"><?php echo $limba == "en" ? "Email" : "Email"; ?></div>
                     </div>
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label margin_elem_formular">
-                        <label for="telefon4" class="mdl-textfield__label"><?php echo $limba == "en" ? "Phone" : "Telefon"; ?><span class="obligatoriu">*</span></label>
+                        <label for="telefon4" class="mdl-textfield__label"><?php echo $limba == "en" ? "Phone" : "Telefon"; ?></label>
                         <input type="tel" name="telefon4" id="telefon4" class="mdl-textfield__input">
                         <div class="mdl-tooltip" data-mdl-for="telefon4" style="font-size:14px;"><?php echo $limba == "en" ? "Phone" : "Telefon"; ?></div>
                     </div>
@@ -172,6 +170,10 @@ defined("autorizare") or die("Nu aveti autorizare");
                 <div class="mdl-cell mdl-cell--12-col" style="text-align: center;">
                     <input id="regulament" type="checkbox" name="regulament" value="regulament">
                     <label for="regulament"><?php echo $limba == "en" ? "By register I accept the" : "Prin această înregistrare accept"; ?> <a target="_blank" href="<?php echo $limba == "en" ? _SITE_BASE . "Regulament_EN.pdf" : _SITE_BASE . "Regulament_RO.pdf"; ?>"><?php echo $limba == "en" ? "the competition rules" : "regulamentul concursului"; ?> </a>.<span class="obligatoriu">*</span></label>
+                </div>
+                <div class="mdl-cell mdl-cell--12-col" style="text-align: center;">
+                    <input id="facultate" type="checkbox" name="facultate" value="facultate">
+                    <label for="facultate"><?php echo $limba == "en" ? "The team members are from the Faculty of Automatic Control and Computer Science." : "Membri echipei sunt de la Facultatea de Automatică și Calculatoare."; ?><span class="obligatoriu">*</span></label>
                 </div>
             </div>
 

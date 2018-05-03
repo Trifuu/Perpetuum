@@ -143,7 +143,7 @@ $(document).ready(function () {
                             <td>" + participant["prenume2"] + "</td>\n\
                             <td>" + participant["email2"] + "</td>\n\
                             <td>" + participant["telefon2"] + "</td>\n\
-                            <td class='buton_apend2'><button data-id='" + i + "' title='Limbajele cunoscute de echipa.' type='button' class='btn btn-info btn-sm' data-toggle='modal' data-target='#modal_limbaje'>Limbaje</button></td>\n\
+                            <td></td>\n\
                         </tr>\n\
                         <tr class='append" + id + "'>\n\
                             <td>3</td>\n\
@@ -151,7 +151,7 @@ $(document).ready(function () {
                             <td>" + participant["prenume3"] + "</td>\n\
                             <td>" + participant["email3"] + "</td>\n\
                             <td>" + participant["telefon3"] + "</td>\n\
-                            <td class='buton_apend3'><button data-id='" + i + "' title='Evenimentele la care a mai participat echipa.' type='button' class='btn btn-info btn-sm' data-toggle='modal' data-target='#modal_evenimente'>Evenimente</button></td>\n\
+                            <td></td>\n\
                         </tr>\n\
                         <tr class='append" + id + "'>\n\
                             <td>4</td>\n\
@@ -166,14 +166,6 @@ $(document).ready(function () {
     $('#modal_comentariu').on('show.bs.modal', function (e) {
         var id = $(e.relatedTarget).data('id');
         document.getElementById("continut_comentariu").innerHTML = participanti[id]["comentariu"];
-    });
-    $('#modal_limbaje').on('show.bs.modal', function (e) {
-        var id = $(e.relatedTarget).data('id');
-        document.getElementById("continut_limbaje").innerHTML = participanti[id]["limbaje"];
-    });
-    $('#modal_evenimente').on('show.bs.modal', function (e) {
-        var id = $(e.relatedTarget).data('id');
-        document.getElementById("continut_evenimente").innerHTML = participanti[id]["evenimente"];
     });
 
     function convertToCSV(object) {
@@ -236,8 +228,7 @@ $(document).ready(function () {
     $("#participanti_table_length").after(
             '<button id="download_csv" type="submit" style="cursor: pointer;">Download</button>');
     $("#download_csv").on("click", function () {
-        var fileTitle = 'HackItAll participanti';
+        var fileTitle = 'Perpetuum participanti';
         exportCSVFile(participanti, fileTitle);
     });
-    console.log(participanti);
 });

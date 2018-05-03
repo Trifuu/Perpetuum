@@ -18,7 +18,7 @@ defined("autorizare") or die("Nu aveti autorizare");
         <span style="position:absolute;margin-left: 89px;margin-top:-8px;">April</span>
         <img src="<?php echo _SITE_CSS . "img/about_stanga.png"; ?>" style="max-width: 350px;max-height: 200px;margin: auto;margin-top: -58px;">
     </div>
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" style="font-size:48px;font-family: font1;">
+    <div class="telefon_about col-xs-12 col-sm-12 col-md-6 col-lg-6" style="font-size:48px;font-family: font1;">
         <a target="_blank" style="text-decoration: none;color:white;" href="https://www.google.ro/maps/place/Biblioteca+Central%C4%83/@44.441065,26.0492465,17z/data=!3m1!4b1!4m5!3m4!1s0x40b201c1c2998f79:0x1acb42f08800db7a!8m2!3d44.441065!4d26.0514352?shorturl=1">
             <span style="position:absolute;margin-left: 174px;margin-top:-56px;">UPB</span>
             <span style="position:absolute;margin-left: 148px;margin-top:-10px;">Library</span>

@@ -21,16 +21,18 @@ if (file_exists($target_file)) {
     unlink($target_file);
 }
 // Check file size
-if ($_FILES["fileToUpload"]["size"] > 500000) {
+if ($_FILES["fileToUpload"]["size"] > 30000000) {
     $mesaj= "Ai incarcat un fisier prea mare!";
+    $uploadOk = 3;
+}
+if(time()>1523185200) {
     $uploadOk = 0;
 }
-
 // Check if $uploadOk is set to 0 by an error
 if ($uploadOk == 0) {
     $mesaj= "Sorry, your file was not uploaded.";
 // if everything is ok, try to upload file
-} else {
+} else if ($uploadOk != 3) {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
         $mesaj= "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
     } else {

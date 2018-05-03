@@ -25,7 +25,7 @@ defined("autorizare") or die("Nu aveti autorizare");
                     <?php
                     foreach ($participanti as $row) {
                         echo "<tr>";
-                        echo "<td title='" . htmlspecialchars($row["user_stare_change"], ENT_QUOTES) . "' style='width:120px;background-color:" . traducere_stare($row["stare_echipa"], true) . "'> " . traducere_stare($row["stare_echipa"]) . "</td>";
+                        echo "<td title='" . htmlspecialchars($row["user_stare_change"], ENT_QUOTES) . "' style='width:120px;background-color:" . traducere_stare($row["stare_echipa"], true) . ";'> " . traducere_stare($row["stare_echipa"]) . "</td>";
                         echo "<td>" . htmlspecialchars($row["echipa"], ENT_QUOTES) . "</td>";
                         echo "<td>" . date('d-M-Y H:i:s', htmlspecialchars($row["data_inscriere"], ENT_QUOTES)) . "</td>";
                         echo "<td><a target='_blank' href='" . htmlspecialchars($row["link_cv"], ENT_QUOTES) . "' class='btn btn-info btn-sm link_cv'>link</a>";

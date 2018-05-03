@@ -37,7 +37,10 @@ if ($user == null && ($page == "users" || $page == "participanti" || $page == "d
     $page = "home";
     $view = "dashboard";
 }
-
+if ($page == "formular"){
+    $page = "home";
+    $view = "dashboard";
+}
 switch ($page):
     case "home":
         require_once _ROOT_CONTENT . "home/controller.php";

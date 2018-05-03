@@ -59,6 +59,9 @@ $(document).ready(function () {
             },
             regulament:{
                 required:true
+            },
+            facultate:{
+                required:true
             }
         },
         highlight: function (element) {
@@ -72,37 +75,6 @@ $(document).ready(function () {
             $(element).css("color", "darkgreen");
             $(element).css("border-color", "darkgreen");
         }
-    });
-    $("#change_number_of_members").click(function(){
-        var number=[];
-        var buton=$("#change_number_of_members").text();
-        if(~buton.indexOf("3")){
-            number[0]="3";
-            number[1]="4";
-        } else {
-            number[0]="4";
-            number[1]="3";
-        }
-        buton=buton.replace(number[0],number[1]);
-        $("#change_number_of_members").text(buton);
-        if(number[0]=="4"){
-            document.getElementById("member1").classList.remove("mdl-cell--4-col");
-            document.getElementById("member1").classList.add('mdl-cell--6-col');
-            document.getElementById("member2").classList.remove("mdl-cell--4-col");
-            document.getElementById("member2").classList.add("mdl-cell--6-col");
-            document.getElementById("member3").classList.remove("mdl-cell--4-col");
-            document.getElementById("member3").classList.add("mdl-cell--6-col");
-            $("#member4").css("display","");
-        }else{
-            document.getElementById("member1").classList.remove("mdl-cell--6-col");
-            document.getElementById("member1").classList.add('mdl-cell--4-col');
-            document.getElementById("member2").classList.remove("mdl-cell--6-col");
-            document.getElementById("member2").classList.add("mdl-cell--4-col");
-            document.getElementById("member3").classList.remove("mdl-cell--6-col");
-            document.getElementById("member3").classList.add("mdl-cell--4-col");
-            $("#member4").css("display","none");
-        }
-        
     });
     
     $("#go_back").on("click", function () {

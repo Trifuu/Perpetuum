@@ -60,7 +60,7 @@ $limba = $_SESSION["limba"];
 
 # -- variable declare
 $sid = session_id();
-//$sha256_session_id = hash("sha256", $sid);
+$sha256_session_id = hash("sha256", $sid);
 //try{
 //    $stmt=$db->prepare('');
 //    $stmt->execute();

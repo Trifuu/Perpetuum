@@ -20,7 +20,7 @@ if ($tip_user == 0 || $tip_user == 1) {
         $id = $_POST["id"];
         for ($i = 0; $i < count($id); $i++) {
             $duser = get_user($id[$i]);
-            if(($tip_user!=0 && get_user_type($duser["categorie"], "users")==0) || $id[$i] == 3) {
+            if(($tip_user!=0 && get_user_type($duser["categorie"], "users")==0) || $id[$i] == 1) {
                 //nu se sterg utilizatori pentru care nu are acces
             } else {
                 if ($id[$i] != $id_user) {
@@ -39,7 +39,8 @@ if ($tip_user == 0 || $tip_user == 1) {
     } else {
         $id = $_POST["id"];
         $duser = get_user($id);
-        if (($tip_user != 0 && get_user_type($duser["categorie"], "users") == 0) || $id == 3) {
+        if (($tip_user != 0 && get_user_type($duser["categorie"], "users") == 0) || $id == 1) {
+            
             echo getUrl("users", "dashboard", false, ["message" => "Nu aveti drepturi pentru a sterge un utilizator din categoria " . $duser["categorie"] . "!", "status" => "nok"]);
         } else {
             if ($id != $id_user) {
